@@ -1,7 +1,3 @@
-Sure! Here’s a **very short and clean** README you can use:
-
----
-
 # Portfolio App
 
 A simple Node.js + Express portfolio app where you can upload, edit, and delete projects with images.
