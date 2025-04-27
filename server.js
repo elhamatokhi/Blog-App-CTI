@@ -2,7 +2,7 @@ import express from "express";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
-// import router from "./routes/router.js";
+import router from "./routes/router.js";
 
 // Express setup
 const app = express();
@@ -14,7 +14,7 @@ app.use("/uploads", express.static("uploads"));
 app.set("view engine", "ejs");
 
 // File and Folder Setup
-if (!fs.existsSync("projects.json")) fs.writeFileSync("projects.json", "[]");
+if (!fs.existsSync("posts.json")) fs.writeFileSync("posts.json", "[]");
 if (!fs.existsSync("uploads")) fs.mkdirSync("uploads");
 
 // Multer setup
@@ -28,6 +28,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Route Handling
+
+app.use('/',(router(upload)))
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`);

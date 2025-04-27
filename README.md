@@ -1,10 +1,10 @@
-# Portfolio App
+# Blog App
 
-A simple Node.js + Express portfolio app where you can upload, edit, and delete projects with images.
+A simple Node.js + Express Blog app where you can upload, edit, and delete blogs with images.
 
 ## Tech Stack
 
 - **Node.js** & **Express** — Backend and routing
 - **EJS** — Templating engine for dynamic HTML
-- **Multer** — For uploading project images
+- **Multer** — For uploading blog images
 - **File System (fs)** — To save and update project data (JSON file)
